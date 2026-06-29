@@ -50,7 +50,7 @@ export default function Portal() {
     e.preventDefault();
     setStatus({ loading: true, msg: '' });
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://inccinnovation-backend.onrender.com/api/contact", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: `${user.name} (Client: ${user.phone})`, emailPhone: user.phone, category: activeCategory, details: formDetails.message })
       });
